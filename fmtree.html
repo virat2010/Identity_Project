@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="familytree.js"></script>
-    <link rel="x-icon" href="/images/65275_441243_1.png">
-    <title>My Family Tree</title>
     <style>
         html,
         body {
@@ -22,12 +16,31 @@
             height: 100%;
         }
     </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="familytree.js"></script>
+    <link rel="script" href="/js/jquery.min.js"></link>
+    <link rel="shortcut icon" href="/images/65275_441243_1.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>My Family Tree</title>
 </head>
 <body>
-    <a></a>
-    <div style="width:100%; height:auto;" id="tree"></div>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+            Identity Project
+            </a>
+            <a class="justify-content-left text-white nav-link mr-2" href="https://viratwiz.com">
+            Home
+            </a>
+        </div>
+    </nav>
+    <div style="width:100%; height:auto;" id="tree">
+    </div>
     <script>
-        var family = new FamilyTree(document.getElementById('tree'), {
+    var family = new FamilyTree(document.getElementById('tree'), {
         mouseScrool: FamilyTree.action.zoom,
         mode: 'dark',
         template: 'hugo',
